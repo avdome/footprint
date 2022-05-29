@@ -12,8 +12,6 @@ function TitleScreen(props) {
   );
 }
 
-export default TitleScreen;
-
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -30,3 +28,5 @@ const styles = StyleSheet.create({
         //textAlign: 'center',
      // },
 })
+
+export default TitleScreen;
