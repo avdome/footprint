@@ -1,13 +1,19 @@
 import React from 'react';
-import { Text, View, StyleSheet, SafeAreaView, Image } from 'react-native';
+import { StyleSheet, SafeAreaView, Image, TouchableHighlight } from 'react-native';
+import colors from '../config/colors';
 
 function TitleScreen(props) {
   const handlePress = () => console.log("Text Clicked")
   return (
   <SafeAreaView style={styles.container}>
-    <Image 
-      fadeDuration = {1000}
-      source={require("../assets/logo.png")}/>
+    <TouchableHighlight 
+      onPress={() => handlePress}  // isn't working -> navigation.navigate('HomeScreen')
+    >
+      <Image 
+        fadeDuration = {1000}
+        source={require("../assets/logo.png")}
+      />
+    </TouchableHighlight>
   </SafeAreaView>
   );
 }
@@ -16,7 +22,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         //paddingTop: Constants.statusBarHeight,
-        backgroundColor: 'lightgrey',
+        backgroundColor: colors.primary,
         justifyContent: 'center',
         alignItems : "center",
         //padding: 8,

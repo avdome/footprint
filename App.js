@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, SafeAreaView, Image } from 'react-native';
-import Constants from 'expo-constants';
 import TitleScreen from './app/screens/TitleScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './app/screens/HomeScreen';
 
 // import { createStackNavigator, createAppContainer } from '@react-navigation/native';
 
@@ -20,6 +19,11 @@ const App = () => {
           name="Title"
           component={TitleScreen}
           options={{ title: 'TitleScreen' }}
+        />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ title: 'HomeScreen' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
